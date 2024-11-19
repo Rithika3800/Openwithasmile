@@ -1,0 +1,325 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffd1dc, #ffe4e1);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the main content */
+.container {
+    display: none; /* Hide content initially */
+}
+
+/* Timer Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.timer {
+    font-size: 48px;
+}
+
+/* GIF styling */
+.overlay-gif {
+    width: 200px; /* Adjust size of the GIF */
+    height: auto;
+    margin-top: 20px; /* Space between the timer text and the GIF */
+}
+
+/* Header Section */
+header {
+    padding: 20px;
+    background-color: #ffb6c1;
+    color: white;
+    border-radius: 15px 15px 0 0;
+    animation: headerAnimation 2s ease-out;
+}
+
+@keyframes headerAnimation {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.header-gif {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    animation: gifAnimation 2s ease-out;
+}
+
+@keyframes gifAnimation {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Sections */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ffe4e1;
+    border-radius: 10px;
+    animation: sectionAnimation 1.5s ease-out;
+}
+
+@keyframes sectionAnimation {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.section-gif {
+    width: 150px;
+    height: auto;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.section-gif:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f50057;
+}
+
+.reveal-button:active {
+    transform: scale(1.1);
+}
+
+/* Gallery */
+.memory-gallery img {
+    width: 100px;
+    margin: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.memory-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Section */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff80ab;
+    color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.footer-gif {
+    width: 80px;
+    height: auto;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+#answer-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Confetti Effect Styles */
+@keyframes confettiFall {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+}
+
+.confetti {
+    position: fixed;
+    top: -10%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #ff80ab;
+    border-radius: 50%;
+    animation: confettiFall 5s linear infinite;
+    animation-timing-function: ease-in;
+}
+
+/* You can add different colors to confetti for a more vibrant effect */
+.confetti:nth-child(odd) {
+    background-color: #ff4081;
+}
+.confetti:nth-child(even) {
+    background-color: #f50057;
+}
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ff3366;
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    color: #ff0033;
+}
+
+.popup p {
+    font-size: 1.5rem;
+    color: #333;
+}
+/* Timeline GIFs */
+.timeline-gif {
+    width: 150px;  /* Set width to match other GIFs */
+    height: auto;  /* Maintain aspect ratio */
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.timeline-gif:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Timeline Section */
+#timeline {
+    margin-top: 30px;
+}
+
+/* Flashcard Styles */
+.flashcard {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ff80ab;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline Section */
+#timeline {
+    margin-top: 30px;
+}
+
+/* Flashcard Styles */
+.flashcard {
+    display: inline-block;
+    width: 250px; /* Adjusted width */
+    height: 250px; /* Adjusted height */
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ff80ab;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline Gif */
+.timeline-gif {
+    width: 80%;  /* Adjusted to make the gif smaller */
+    height: 80%; /* Adjusted to make the gif smaller */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Timeline Event Header and Paragraph */
+.timeline-event h3 {
+    color: #ff80ab;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.timeline-event p {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+.hidden {
+    display: none;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    .section-gif {
+        width: 100px;
+    }
+}
